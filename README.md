@@ -2,7 +2,7 @@
 <h2>Description</h2>
 Project consists of a virtual Windows environment with 1000+ users connected to the domain. The environment was created in VMWare Workstation Pro by connecting virtual machines through an internal network adapter and using Active Directory to attach the clients to the internal domain. The VMs consist of Windows Server 2025 for the domain controller and DHCP Server, with Windows 11 Enterprise deployed as the client. The purpose of this set up is to have an educational lab environment ready for vulnerability analysis and exploitation.
 <br />
-I based this project on Josh Madakor's walkthrough for a home lab. His video is a little bit older but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so here.
+I based this project on Josh Madakor's walkthrough for a home lab. His video is a little bit older but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so (here)(https://www.youtube.com/watch?v=MHsI8hJmggI&list=PLyiUopSz5rksEMcTUVJUFvoWMp00rGH31&index=4).
 <br />
 <h2>Applications Used</h2>
 
