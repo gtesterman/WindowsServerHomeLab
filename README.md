@@ -38,17 +38,75 @@ Create a new virtual machine:  <br />
 <p align="center">
 <img width="428" height="430" alt="Screenshot 2025-10-16 182946" src="https://github.com/user-attachments/assets/23fb9b92-d905-403b-83e5-66ae17e9dfa1" />
 <p/>
-
-
-
-
-
-
-
-
+<br />
+<br />
+  - Set up the network adapters <br />
+    - Network Adapter 1 = NAT <br />
+    - Network Adapter 2 = host only <br />
+  - Keep everything else default
+<br />
+<p align="center">
+<img width="428" height="430" alt="Screenshot 2025-10-16 184047" src="https://github.com/user-attachments/assets/52d3b0f4-1dd1-4057-ac76-63b9473b62e3" />
+<p/>  
+<br />
+<br />
+  - Launch the VM <br />
+  - To unlock the Windows server, send a Ctrl+Alt+Del using VMWare
+  <br />
+<p align="center">
+<img width="752" height="602" alt="Screenshot 2025-10-16 230316" src="https://github.com/user-attachments/assets/3fb291a2-51e1-4431-82f6-329b077ebc68" />
+<p/>
+<br />
+<br />
+  - Once unlocked, the VM will prompt you to install VMWare Workstation Tools. This may prompt for a restart.
+<br />
+<p align="center">
+<img width="2560" height="1392" alt="Screenshot 2025-10-16 203042" src="https://github.com/user-attachments/assets/3a38cb88-6e9e-45e9-bee7-12ccec9cece6" />
+<p/>
+<br />
+<br />
+Set up the domain controller:  <br />
+- Verify the network connections <br />
+- Label the internal network adapter and set up IPv4
+<br />
+<p align="center">
+<img width="420" height="469" alt="Screenshot 2025-10-16 231548" src="https://github.com/user-attachments/assets/21cc4fc2-a115-43f8-a473-b19dd71c6255" />
+<p/>
+<br />
+<br />
+- Go to Server Manager > Add Roles and Features
+<br />
+<p align="center">
+<img width="1032" height="788" alt="Screenshot 2025-10-16 203619" src="https://github.com/user-attachments/assets/7aef8b5d-c1be-4d34-921d-d180d88c83bb" />
+<p/>
+<br />
+<br />
+- Install Active Directory Domain Services, DHCP, and DNS <br />
+- Restart may be required
+<br />
+<p align="center">
+<img width="798" height="566" alt="Screenshot 2025-10-16 231634" src="https://github.com/user-attachments/assets/e94f405c-d945-4ced-b5b6-b60078750715" />
+<p/>
+<br />
+<br />
+- Use Active Directory to create your admin account <br />
+- Use Powershell script to add your users to the "Users" Organizational Unit.
+- Place the admin account in an Organizational Unit for "Admins"
+<br />
+<p align="center">
+<img width="777" height="555" alt="Screenshot 2025-10-19 171337" src="https://github.com/user-attachments/assets/d66d6075-e55b-41b7-af88-116c301669d7" />
+<p/>
+<br />
+<br />
+- Open Server Manager > Tools > DHCP <br />
+- Set up your DHCP Server with the network details used in the internal network
+Address Range = 172.16.0.100 - 172.16.0.200
+Subnet Mask = 255.255.255.0
 
 
 <br />
 <p align="center">
 
 <p/>
+<br />
+<br />
