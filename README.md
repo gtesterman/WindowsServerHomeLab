@@ -1,22 +1,24 @@
 <h1>Windows Home Lab with Active Directory</h1>
 <h2>Description</h2>
-Project consists of a virtual Windows environment with 1000+ users connected to the domain. The environment was created in VMWare Workstation Pro by connecting virtual machines through an internal network adapter and using Active Directory to attach the clients to the internal domain. The VMs consist of Windows Server 2025 for the domain controller and DHCP Server, with Windows 11 Enterprise deployed as the client. The purpose of this set up is to have an educational lab environment ready for vulnerability analysis and exploitation.
+This project consists of a virtual Windows environment with Active Directory users connected to the domain. The environment was created in VMware Workstation Pro by connecting virtual machines through an internal network adapter and using Active Directory to attach the clients to the internal domain. The VMs consist of Windows Server 2025 for the domain controller and DHCP Server, with Windows 11 Enterprise deployed as the client. The purpose of this set up is to have an educational lab environment ready for vulnerability analysis and exploitation.
 <br />
-I based this project on Josh Madakor's walkthrough for a home lab. His video is a little bit older but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so (here)(https://www.youtube.com/watch?v=MHsI8hJmggI&list=PLyiUopSz5rksEMcTUVJUFvoWMp00rGH31&index=4).
+I based this project on Josh Madakor's walkthrough for a home lab. His video is a little bit older but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so
+
+[here](https://www.youtube.com/watch?v=MHsI8hJmggI&list=PLyiUopSz5rksEMcTUVJUFvoWMp00rGH31&index=4).
 <br />
 <h2>Applications Used</h2>
 
-- <b>Vmware Workstation Pro (for virtualization)</b>
+- <b>[Vmware Workstation Pro](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)</b>
 - <b>PowerShell</b>
 <h2>Environments Used </h2>
 
-- <b>Windows Server 2025</b>
-- <b>Windows 11</b>
+- <b>[Windows Server 2025](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025?msockid=3653bc85d863632634beaa02d91a62b3)</b>
+- <b>[Windows 11](https://www.microsoft.com/en-in/evalcenter/download-windows-11-enterprise)</b>
 
 <h2>Hardware Requirements </h2>
 
 - <b>16GB RAM</b>
-- <b>100GB Storage</b>
+- <b>124GB Storage</b>
 <br />
 <br />
 
@@ -91,7 +93,7 @@ Set up the domain controller:  <br />
 <br />
 <br />
 - Use Active Directory to create your admin account <br />
-- Use Powershell script to add your users to the "Users" Organizational Unit.
+- (optional) Use a PowerShell script to add your domain users to the "Users" Organizational Unit. <br />
 - Place the admin account in an Organizational Unit for "Admins"
 <br />
 <p align="center">
@@ -109,7 +111,7 @@ Subnet Mask = 255.255.255.0
 <br />
 Create the Workstation VM:<br />
 - Create a new machine with the windows 11 ISO <br />
-- Use default settings and host-only network adapter
+- Use default settings and host-only network adapter <br />
 - Launch the VM and start the installation  
 <br />
 <p align="center">
@@ -135,23 +137,18 @@ Create the Workstation VM:<br />
 <p/>
 <br />
 <br />
-- Once restarted, the workstation should be able to be logged into with domain credentials and have access to the Internet through the DHCP server.
+- Once restarted, the workstation should be able to log in with domain credentials.
 <br />
 <p align="center">
 <img width="1032" height="985" alt="Screenshot 2025-10-04 225226" src="https://github.com/user-attachments/assets/c8bea4d2-b521-458f-97cd-1a378c1f59af" />
 <p/>
 <br />
 <br />
-
-
-
-
-
-
-
+- To manage domain computers, use the Computers folder in Active Directory
 <br />
 <p align="center">
-
+<img width="703" height="527" alt="Screenshot 2025-10-04 223556" src="https://github.com/user-attachments/assets/7b5ff965-fbb0-466b-ad51-d75696fc8d43" />
 <p/>
 <br />
 <br />
+<b> Once the client is connected to the domain and has a working Internet connection through the DHCP server, the Windows setup is complete.</b>
