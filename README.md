@@ -82,6 +82,7 @@ Set up the domain controller:  <br />
 <br />
 <br />
 - Install Active Directory Domain Services, DHCP, and DNS <br />
+- Create the domain name for your network <br />
 - Restart may be required
 <br />
 <p align="center">
@@ -99,9 +100,53 @@ Set up the domain controller:  <br />
 <br />
 <br />
 - Open Server Manager > Tools > DHCP <br />
-- Set up your DHCP Server with the network details used in the internal network
-Address Range = 172.16.0.100 - 172.16.0.200
-Subnet Mask = 255.255.255.0
+- Set up your DHCP Server with the network details used in the internal network <br />
+Address Range = 172.16.0.100 - 172.16.0.200 <br />
+Subnet Mask = 255.255.255.0 
+<br />
+<br />
+<br />
+<br />
+Create the Workstation VM:<br />
+- Create a new machine with the windows 11 ISO <br />
+- Use default settings and host-only network adapter
+- Launch the VM and start the installation  
+<br />
+<p align="center">
+<img width="1099" height="879" alt="Screenshot 2025-10-04 190933" src="https://github.com/user-attachments/assets/4fd973fc-a0e6-4d21-aef4-041a5e5b0bd1" />
+<img width="1051" height="1196" alt="Screenshot 2025-10-04 180354" src="https://github.com/user-attachments/assets/37eabe14-a303-449b-af62-eb912810b4c0" />
+<p/>
+<br />
+<br />
+- When getting started with the workstation, select "I don't have Internet" <br />
+- Keep all other settings to your preference
+<br />
+<p align="center">
+<img width="1032" height="774" alt="Screenshot 2025-10-04 180133" src="https://github.com/user-attachments/assets/c157f260-a3ec-43b4-adf8-1b9f4ef922b4" />
+<p/>
+<br />
+<br />
+- Use Command prompt to confirm you have a connection to the Windows Server <br />
+- Go to Settings > System Properties to change your computer's name and make it a member of the domain <br />
+- Computer will prompt for crendentials then force a restart
+<br />
+<p align="center">
+<img width="1003" height="802" alt="Screenshot 2025-10-04 223300" src="https://github.com/user-attachments/assets/fb4ca9d4-06e1-4448-8a48-4c486c7121ba" />
+<p/>
+<br />
+<br />
+- Once restarted, the workstation should be able to be logged into with domain credentials and have access to the Internet through the DHCP server.
+<br />
+<p align="center">
+<img width="1032" height="985" alt="Screenshot 2025-10-04 225226" src="https://github.com/user-attachments/assets/c8bea4d2-b521-458f-97cd-1a378c1f59af" />
+<p/>
+<br />
+<br />
+
+
+
+
+
 
 
 <br />
