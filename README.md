@@ -205,25 +205,32 @@ Create the Workstation VM:<br />
 <br />
 - Use Command prompt to confirm you have a connection to the Windows Server <br />
 - Go to Settings > System Properties to change your computer's name and make it a member of the domain <br />
-- Computer will prompt for crendentials then force a restart
+- Computer will welcome you and prompt for crendentials then force a restart
 <br />
 <p align="center">
-<img width="1003" height="802" alt="Screenshot 2025-10-04 223300" src="https://github.com/user-attachments/assets/fb4ca9d4-06e1-4448-8a48-4c486c7121ba" />
+<img width="825" height="660" alt="image" src="https://github.com/user-attachments/assets/524445d1-ae99-4aa7-9ad5-f9f5e9c00225" />
+
+<img width="815" height="652" alt="image" src="https://github.com/user-attachments/assets/2c550696-82cf-4b60-9bd8-6713f728e88f" />
+
+<img width="767" height="613" alt="image" src="https://github.com/user-attachments/assets/82af441a-a6a4-4493-9180-dd491c7718c8" />
+
 <p/>
 <br />
 <br />
 - Once restarted, the workstation should be able to log in with domain credentials.
 <br />
 <p align="center">
-<img width="1032" height="985" alt="Screenshot 2025-10-04 225226" src="https://github.com/user-attachments/assets/c8bea4d2-b521-458f-97cd-1a378c1f59af" />
+<img width="1032" height="826" alt="image" src="https://github.com/user-attachments/assets/bed668b2-5223-46be-b87b-02c6fa4eeba6" />
+
 <p/>
 <br />
 <br />
 - To manage domain computers, use the Computers folder in Active Directory
 <br />
 <p align="center">
-<img width="703" height="527" alt="Screenshot 2025-10-04 223556" src="https://github.com/user-attachments/assets/7b5ff965-fbb0-466b-ad51-d75696fc8d43" />
+<img width="842" height="674" alt="image" src="https://github.com/user-attachments/assets/d275ba75-6791-43d0-a2f6-f84137257e28" />
+
 <p/>
 <br />
 <br />
-<b> Once the client is connected to the domain and has a working Internet connection through the DHCP server, the Windows setup is complete.</b>
+<b> Once the client is connected to the domain and has a working Internet connection through the DHCP server, the Windows home lab setup is complete.</b>
