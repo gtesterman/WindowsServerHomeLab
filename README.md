@@ -206,7 +206,7 @@ Create the Workstation VM:<br />
 <br />
 - Use Command prompt to confirm you have a connection to the Windows Server <br />
 - Go to Settings > System Properties to change your computer's name and make it a member of the domain <br />
-- Computer will welcome you and prompt for crendentials then force a restart
+- Computer will welcome you and prompt for credentials then force a restart
 <br />
 <p align="center">
 <img width="825" height="660" alt="image" src="https://github.com/user-attachments/assets/524445d1-ae99-4aa7-9ad5-f9f5e9c00225" />
