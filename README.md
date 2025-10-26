@@ -2,7 +2,7 @@
 <h2>Description</h2>
 This project consists of a virtual Windows environment with Active Directory users connected to the domain. The environment was created in VMware Workstation Pro by connecting virtual machines through an internal network adapter and using Active Directory to attach the clients to the internal domain. The VMs consist of Windows Server 2025 for the domain controller and DHCP Server, with Windows 11 Enterprise deployed as the client. The purpose of this set up is to have an educational lab environment ready for vulnerability analysis and exploitation.
 <br />
-I based this project on Josh Madakor's walkthrough for a home lab. His video is a little bit older but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so
+I based this project on Josh Madakor's walkthrough for a home lab. His video uses older VMs but I will be utilizing the same basic architecture. If you are interested in watching the original lab you may do so
 
 [here](https://www.youtube.com/watch?v=MHsI8hJmggI&list=PLyiUopSz5rksEMcTUVJUFvoWMp00rGH31&index=4).
 <br />
@@ -35,7 +35,8 @@ Create a new virtual machine:  <br />
 <br />
 <br />
   - Create a username and password for the machine <br />
-  - Product key is not needed if you are using the free trial from Microsoft Evaluation Center
+  - Product key is not needed if you are using the free trial from Microsoft Evaluation Center <br />
+⚠️IMPORTANT: If you don't set up a password now, you will be unable to create a domain
 <br />
 <p align="center">
 <img width="428" height="430" alt="Screenshot 2025-10-16 182946" src="https://github.com/user-attachments/assets/23fb9b92-d905-403b-83e5-66ae17e9dfa1" />
@@ -171,7 +172,7 @@ Subnet Mask = 255.255.255.0
 
 <img width="1010" height="871" alt="Screenshot 2025-10-21 192534" src="https://github.com/user-attachments/assets/0f06bd73-bc9a-4171-b7fb-e9d7a164d92c" />
 <p/>
-
+⚠️IMPORTANT: In order for the server to work you will need to refresh DHCP by right-clicking on the IPv4 server.
 
 
 <br />
